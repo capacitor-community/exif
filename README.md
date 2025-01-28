@@ -44,12 +44,13 @@ This plugin has been primarity implemented to enhance other plugins which requir
 - support setting coordinates to image files
 - supports Android and iOS platforms
 
-**NOTE**: The plugin version 6.0.0 is compatible with Capacitor 6
+**NOTE**: The plugin version 7.0.0 is compatible with Capacitor 7
 
 ## Plugin versions
 
 | Capacitor version | Plugin version |
 | ----------------- | -------------- |
+| 7.x               | 7.x            |
 | 6.x               | 6.x            |
 
 ## Supported Platforms
@@ -67,7 +68,9 @@ npx cap sync
 ## Configuration
 
 ### Android
+
 This plugin will use the following project variables (defined in your app's variables.gradle file):
+
 ```
 androidxExifInterfaceVersion: version of androidx.exifinterface:exifinterface (default: 1.3.6)
 ```
@@ -81,7 +84,6 @@ androidxExifInterfaceVersion: version of androidx.exifinterface:exifinterface (d
 * [Interfaces](#interfaces)
 
 </docgen-index>
-
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
@@ -144,6 +146,8 @@ Get the coordinates from the image EXIF metadata.
 
 ## Usage
 
+Please also see **example-app** for a complete example.
+
 ### Set coordinates to image file
 
 ```
@@ -168,4 +172,3 @@ const coordinates: {
     lng: number;
 } | undefined = await this.exifPlugin.getCoordinates(options);
 ```
-
