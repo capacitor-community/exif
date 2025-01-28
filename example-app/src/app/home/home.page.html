@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Exif Demo App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Exif Demo App</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-toolbar class="button-toolbar">
+    <ion-buttons>
+      <ion-button color="primary" fill="solid" (click)="testExif()">Test Exif</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ng-container *ngIf="originalImageWebPath">
+    <div class="title">Original Image/Photo</div>
+    <div class="image-container">
+      <img alt="Photo" class="original-photo" id="originalImage" />
+    </div>
+    <ion-label class="info-details">
+      <h2>Original Coordinates</h2>
+      <p>Lat: {{ originalCoordinates?.lat }}</p>
+      <p>Lng: {{ originalCoordinates?.lng }}</p>
+    </ion-label>
+    <ion-label class="info-details">
+      <h2>New Coordinates</h2>
+      <p>Lat: {{ newCoordinates?.lat }}</p>
+      <p>Lng: {{ newCoordinates?.lng }}</p>
+    </ion-label>
+  </ng-container>
+
+</ion-content>
