@@ -79,9 +79,9 @@ androidxExifInterfaceVersion: version of androidx.exifinterface:exifinterface (d
 
 <docgen-index>
 
-- [`setCoordinates(...)`](#setcoordinates)
-- [`getCoordinates(...)`](#getcoordinates)
-- [Interfaces](#interfaces)
+* [`setCoordinates(...)`](#setcoordinates)
+* [`getCoordinates(...)`](#getcoordinates)
+* [Interfaces](#interfaces)
 
 </docgen-index>
 
@@ -102,7 +102,8 @@ Set the coordinates to the image EXIF metadata.
 
 **Since:** 6.0.0
 
----
+--------------------
+
 
 ### getCoordinates(...)
 
@@ -120,9 +121,11 @@ Get the coordinates from the image EXIF metadata.
 
 **Since:** 6.0.0
 
----
+--------------------
+
 
 ### Interfaces
+
 
 #### SetCoordinatesOptions
 
@@ -131,6 +134,7 @@ Get the coordinates from the image EXIF metadata.
 | **`pathToImage`** | <code>string</code> | The path to the image to set the coordinates to the EXIF metadata. | 6.0.0 |
 | **`lat`**         | <code>number</code> | The latitude of the image coordinates.                             | 6.0.0 |
 | **`lng`**         | <code>number</code> | The longitude of the image coordinates.                            | 6.0.0 |
+
 
 #### GetCoordinatesOptions
 
