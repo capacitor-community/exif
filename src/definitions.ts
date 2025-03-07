@@ -1,19 +1,16 @@
 export interface GetCoordinatesOptions {
-
   /**
    * The path to the image to get the coordinates from EXIF metadata.
-   * 
+   *
    * @since 6.0.0
    */
   pathToImage: string;
-
 }
 
 export interface SetCoordinatesOptions {
-
   /**
    * The path to the image to set the coordinates to the EXIF metadata.
-   * 
+   *
    * @since 6.0.0
    */
   pathToImage: string;
@@ -31,11 +28,9 @@ export interface SetCoordinatesOptions {
    * @since 6.0.0
    */
   lng: number;
-
 }
 
 export interface ExifPlugin {
-
   /**
    * Set the coordinates to the image EXIF metadata.
    *
@@ -48,9 +43,11 @@ export interface ExifPlugin {
    *
    * @since 6.0.0
    */
-  getCoordinates(options: GetCoordinatesOptions): Promise<{
-      lat: number;
-      lng: number;
-    } | undefined>;
-
+  getCoordinates(options: GetCoordinatesOptions): Promise<
+    | {
+        lat: number;
+        lng: number;
+      }
+    | undefined
+  >;
 }
