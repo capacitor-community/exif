@@ -1,7 +1,6 @@
 package com.ryltsov.alex.plugins.exif;
 
 import android.util.Log;
-
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
@@ -17,7 +16,6 @@ public class ExifPlugin extends Plugin {
 
     @PluginMethod(returnType = PluginMethod.RETURN_PROMISE)
     public void setCoordinates(final PluginCall call) {
-        
         if (!call.getData().has("pathToImage")) {
             call.reject("Must provide an pathToImage");
             return;
@@ -48,7 +46,6 @@ public class ExifPlugin extends Plugin {
 
     @PluginMethod(returnType = PluginMethod.RETURN_PROMISE)
     public void getCoordinates(final PluginCall call) {
-        
         if (!call.getData().has("pathToImage")) {
             call.reject("Must provide an pathToImage");
             return;
@@ -75,5 +72,4 @@ public class ExifPlugin extends Plugin {
         }
         call.resolve();
     }
-
 }

@@ -14,13 +14,13 @@ public class ExifPlugin: CAPPlugin, CAPBridgedPlugin {
         CAPPluginMethod(name: "setCoordinates", returnType: CAPPluginReturnPromise),
         CAPPluginMethod(name: "getCoordinates", returnType: CAPPluginReturnPromise)
     ]
-    
+
     // Message constants
-    static let INVALID_URL_ERROR = "Invalid URL";
-    static let FAILED_TO_LOAD_IMAGE_ERROR = "Failed to load image";
-    static let FAILED_TO_CREATE_DESTINATION_IMAGE_ERROR = "Failed to create destination image";
-    static let FAILED_TO_SAVE_IMAGE_ERROR = "Failed to save image";
-    
+    static let INVALID_URL_ERROR = "Invalid URL"
+    static let FAILED_TO_LOAD_IMAGE_ERROR = "Failed to load image"
+    static let FAILED_TO_CREATE_DESTINATION_IMAGE_ERROR = "Failed to create destination image"
+    static let FAILED_TO_SAVE_IMAGE_ERROR = "Failed to save image"
+
     private let implementation = Exif()
 
     @objc func setCoordinates(_ call: CAPPluginCall) {
@@ -28,16 +28,16 @@ public class ExifPlugin: CAPPlugin, CAPBridgedPlugin {
         guard let pathToImage = call.options["pathToImage"] as? String else {
             call.reject("Must provide an pathToImage")
             return
-          }
+        }
         guard let latitude = call.options["lat"] as? Double else {
             call.reject("Must provide an lat")
             return
-          }
+        }
         guard let longitude = call.options["lng"] as? Double else {
             call.reject("Must provide an lng")
             return
-          }
-        
+        }
+
         do {
             try implementation.setCoordinates(pathToImage, latitude, longitude)
             call.resolve()
@@ -54,19 +54,19 @@ public class ExifPlugin: CAPPlugin, CAPBridgedPlugin {
         }
 
     }
-    
+
     @objc func getCoordinates(_ call: CAPPluginCall) {
-        
+
         guard let pathToImage = call.options["pathToImage"] as? String else {
             call.reject("Must provide an pathToImage")
             return
         }
-        
+
         do {
             let coordinates = try implementation.getCoordinates(filePath: pathToImage)
             call.resolve([
-              "lat": coordinates.latitude,
-              "lng": coordinates.longitude
+                "lat": coordinates.latitude,
+                "lng": coordinates.longitude
             ])
         } catch ImageProcessingError.invalidURL {
             call.reject(ExifPlugin.INVALID_URL_ERROR)
@@ -77,7 +77,7 @@ public class ExifPlugin: CAPPlugin, CAPBridgedPlugin {
         } catch {
             call.reject(error.localizedDescription, nil, error)
         }
-        
+
     }
 
 }
