@@ -60,7 +60,7 @@ public enum ImageProcessingError: Error {
 
         // print("Successfully saved image with updated metadata")
     }
-    
+
     func getCoordinates(filePath: String) throws -> CLLocationCoordinate2D {
 
         // Convert the file path to a URL
