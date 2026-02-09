@@ -6,14 +6,14 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/maintenance/yes/2025?style=flat-square" />
+  <img src="https://img.shields.io/maintenance/yes/2026?style=flat-square" />
   <a href="https://www.npmjs.com/package/@capacitor-community/exif"><img src="https://img.shields.io/npm/l/@capacitor-community/exif?style=flat-square" /></a>
-<br>
+  <br>
   <a href="https://www.npmjs.com/package/@capacitor-community/exif"><img src="https://img.shields.io/npm/dw/@capacitor-community/exif?style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/@capacitor-community/exif"><img src="https://img.shields.io/npm/v/@capacitor-community/exif?style=flat-square" /></a>
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<a href="#contributors-"><img src="https://img.shields.io/badge/all%20contributors-1-orange?style=flat-square" /></a>
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+  <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+  <a href="#contributors-"><img src="https://img.shields.io/badge/all%20contributors-1-orange?style=flat-square" /></a>
+  <!-- ALL-CONTRIBUTORS-BADGE:END -->
 </p>
 
 # Table of Contents
