@@ -16,10 +16,10 @@ public class ExifPlugin: CAPPlugin, CAPBridgedPlugin {
     ]
 
     // Message constants
-    static let INVALID_URL_ERROR = "Invalid URL"
-    static let FAILED_TO_LOAD_IMAGE_ERROR = "Failed to load image"
-    static let FAILED_TO_CREATE_DESTINATION_IMAGE_ERROR = "Failed to create destination image"
-    static let FAILED_TO_SAVE_IMAGE_ERROR = "Failed to save image"
+    static let invalidUrlError = "Invalid URL"
+    static let failedToLoadImageError = "Failed to load image"
+    static let failedToCreateDestinationImageError = "Failed to create destination image"
+    static let failedToSaveImageError = "Failed to save image"
 
     private let implementation = Exif()
 
@@ -42,13 +42,13 @@ public class ExifPlugin: CAPPlugin, CAPBridgedPlugin {
             try implementation.setCoordinates(pathToImage, latitude, longitude)
             call.resolve()
         } catch ImageProcessingError.invalidURL {
-            call.reject(ExifPlugin.INVALID_URL_ERROR)
+            call.reject(ExifPlugin.invalidUrlError)
         } catch ImageProcessingError.failedToLoadImage {
-            call.reject(ExifPlugin.FAILED_TO_LOAD_IMAGE_ERROR)
+            call.reject(ExifPlugin.failedToLoadImageError)
         } catch ImageProcessingError.failedToCreateDestinationImage {
-            call.reject(ExifPlugin.FAILED_TO_CREATE_DESTINATION_IMAGE_ERROR)
+            call.reject(ExifPlugin.failedToCreateDestinationImageError)
         } catch ImageProcessingError.failedToSaveImage {
-            call.reject(ExifPlugin.FAILED_TO_SAVE_IMAGE_ERROR)
+            call.reject(ExifPlugin.failedToSaveImageError)
         } catch {
             call.reject(error.localizedDescription, nil, error)
         }
@@ -69,9 +69,9 @@ public class ExifPlugin: CAPPlugin, CAPBridgedPlugin {
                 "lng": coordinates.longitude
             ])
         } catch ImageProcessingError.invalidURL {
-            call.reject(ExifPlugin.INVALID_URL_ERROR)
+            call.reject(ExifPlugin.invalidUrlError)
         } catch ImageProcessingError.failedToLoadImage {
-            call.reject(ExifPlugin.FAILED_TO_LOAD_IMAGE_ERROR)
+            call.reject(ExifPlugin.failedToLoadImageError)
         } catch ImageProcessingError.noGPSData {
             call.resolve()
         } catch {
