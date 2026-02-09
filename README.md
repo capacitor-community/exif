@@ -44,12 +44,13 @@ This plugin has been primarity implemented to enhance other plugins which requir
 - support setting coordinates to image files
 - supports Android and iOS platforms
 
-**NOTE**: The plugin version 7.0.0 is compatible with Capacitor 7
+**NOTE**: The plugin version 8.0.0 is compatible with Capacitor 8
 
 ## Plugin versions
 
 | Capacitor version | Plugin version |
 | ----------------- | -------------- |
+| 8.x               | 8.x            |
 | 7.x               | 7.x            |
 | 6.x               | 6.x            |
 
